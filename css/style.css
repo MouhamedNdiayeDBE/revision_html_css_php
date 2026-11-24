@@ -3,7 +3,6 @@
 
 /* menu principale*/
 .navbar{
-    border: 1px solid #111827;
     padding: 20px 40px;
     display: flex;
     justify-content: space-between;
@@ -21,15 +20,20 @@
 main{
     padding: 80px 80px;
     text-align: center;
-    background-color: rgb(138, 114, 69);
+    /*background-color: rgb(138, 114, 69);*/
+    background: linear-gradient(28deg,white,#364564,white);
+    color: rgb(68, 68, 121);
+    display: flex;
+    justify-content: flex-start;
     
     
 }
 
 footer{
-    background-color: lightslategray;
+    /*background-color: lightslategray;*/
     margin-top: 0px;
     padding: 20px 40px;
+    background: linear-gradient(white,#2f5363);
 }
 
 .pied {
@@ -46,9 +50,32 @@ a {
 }
 
 header{
-    background-color: lightslategray;
+    /*background-color: lightslategray;*/
+    background: linear-gradient(#2f5363,white);
+    display: flex;
+    justify-content: center;
 }
 body{
     padding: 0;
     margin: 0;
+    
 }
+ main > div {
+   
+    height: 200px;
+    width: 200px;
+    
+ }
+
+ 
+
+ .consulter {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 3px solid rgb(141, 141, 231);
+    height: 50px;
+    width: 1100px;
+    background-color: rgb(133, 133, 158);
+ }
