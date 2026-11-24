@@ -1,3 +1,25 @@
+<head>
+    <link rel="stylesheet" href="../css/inscription.css">
+</head>
+<body>
+
+<header></header>
+
+<main>
+<div>
+    <form method="POST" action="">
+        <h1>nom:</h1> <input type="text" placeholder="nom" name="nom"><br/>
+        <h1>login:</h1> <input type="text" placeholder="login" name="login"><br/>
+        <h1>mot de passe:</h1> <input type="password" placeholder="mot de passe" name="mdp"><br/>
+        <h1>envoyer:</h1> <input type="submit" value="s'inscrire">
+    </form>
+    
+</div>
+</main>
+
+<footer></footer>
+</body>
+
 <?php
     $login=0;
     $nom="nom";
@@ -21,16 +43,3 @@
     
 
 ?>
-
-<head>
-    <link rel="stylesheet" href="../css/inscription.css">
-</head>
-
-<div>
-<form method="POST" action="">
-    nom: <input type="text" placeholder="nom" name="nom"><br/>
-    login: <input type="text" placeholder="login" name="login"><br/>
-    mot de passe: <input type="password" placeholder="mot de passe" name="mdp"><br/>
-    envoyer: <input type="submit" value="s'inscrire">
-</form>
-</div>

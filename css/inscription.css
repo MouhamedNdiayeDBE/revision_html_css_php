@@ -1,6 +1,6 @@
 body {
-    background: linear-gradient(blue,black,green);
-    color: orange;
+    background: linear-gradient(#0b4f4a,#0b4f4a,#0b4f4a);
+    color: lightcyan;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -16,10 +16,26 @@ input {
 }
 
 form{
-    background-color: black;
-    width: 200px;
-    height: 200px;
+    background-color: #0b4f4a;
+    width: 500px;
+    height: 500px;
     border-radius: 7px;
-    border: 4px solid orange;
+    border: 4px solid #0b4f4a;
+    padding: 10px;
     
+}
+
+header {
+    height: 100px;
+
+    background: linear-gradient(#2f5363,white);
+}
+
+footer {
+    background: linear-gradient(white,#2f5363);
+     height: 100px;
+}
+
+main {
+    background: linear-gradient(white,#0b4f4a,white);
 }
