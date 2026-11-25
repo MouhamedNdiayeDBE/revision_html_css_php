@@ -38,23 +38,24 @@
    
     if($_SERVER['REQUEST_METHOD']==="POST"){
         if(isset($_POST['nom'])&& isset($_POST['login']) && isset($_POST['mdp'])){
-            if(!Empty($_POST['nom']) && !Empty($_POST['login']) && !Empty($_POST['mdp']))    
+            if(!Empty($_POST['nom']) && !Empty($_POST['login']) && !Empty($_POST['mdp'])){
                 extract($_POST);
-            }
-    }
-
-    //connexion de la base de donnee
-    $con=mysqli_connect("localhost","root","","revisionhtml_php");
-
-    //Requete dans la bd
+                //connexion de la base de donnee
+                $con=mysqli_connect("localhost","root","","revisionhtml_php");
+                //Requete dans la bd
     
-    if(mysqli_num_rows(mysqli_query($con,"select * from Personne where login='$login'"))===0){
-        mysqli_query($con, "INSERT INTO Personne VALUES ('$login', '$nom', '$mdp')");
-        header("location:?success=Compte creer avec succes");
+                if(mysqli_num_rows(mysqli_query($con,"select * from Personne where login='$login'"))===0){
+                    mysqli_query($con, "INSERT INTO Personne VALUES ('$login', '$nom', '$mdp')");
+                    header("location: ?success=Compte creer avec succes");
+                }
+                else {
+                    header("location:?error=Ce login existe deja");
+                }
+    
+            }
+        }
     }
-    else {
-        header("location:?error=Ce login existe deja");
-    }
+
     
 
 ?>
