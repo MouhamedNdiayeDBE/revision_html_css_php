@@ -41,7 +41,7 @@
 
     //Requete dans la bd
     
-    if(mysqli_query($con,"select * from Personne where login=".'$login')===false){
+    if(mysqli_num_rows(mysqli_query($con,"select * from Personne where login='$login'"))===0){
         mysqli_query($con, "INSERT INTO Personne VALUES ('$login', '$nom', '$mdp')");
     }
     
