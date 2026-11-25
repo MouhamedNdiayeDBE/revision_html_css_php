@@ -3,21 +3,26 @@
 </head>
 <body>
 
-<header></header>
+    <header>
+    </header>
 
-<main>
-<div>
-    <form method="POST" action="">
-        <h1>nom:</h1> <input type="text" placeholder="nom" name="nom"><br/>
-        <h1>login:</h1> <input type="text" placeholder="login" name="login"><br/>
-        <h1>mot de passe:</h1> <input type="password" placeholder="mot de passe" name="mdp"><br/>
-        <h1>envoyer:</h1> <input type="submit" value="s'inscrire">
-    </form>
+    <main>
+        <div>
+            <form method="POST" action="">
+                <h1>nom:</h1>           <input type="text" placeholder="nom" name="nom"> <br/>
+                <h1>login:</h1>         <input type="text" placeholder="login" name="login"> <br/>
+                <h1>mot de passe:</h1>  <input type="password" placeholder="mot de passe" name="mdp"> <br/>
+                <h1>envoyer:</h1>       <input type="submit" value="s'inscrire">
+            </form>
     
-</div>
-</main>
+        </div>
+    </main>
 
-<footer></footer>
+
+    <footer>
+    </footer>
+
+
 </body>
 
 <?php
@@ -37,7 +42,6 @@
     //Requete dans la bd
     
     if(mysqli_query($con,"select * from Personne where login=".'$login')===false){
-        echo "Inscription Reussi";
         mysqli_query($con, "INSERT INTO Personne VALUES ('$login', '$nom', '$mdp')");
     }
     
