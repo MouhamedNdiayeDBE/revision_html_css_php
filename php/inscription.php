@@ -14,6 +14,15 @@
                 <h1>mot de passe:</h1>  <input type="password" placeholder="mot de passe" name="mdp"> <br/>
                 <h1>envoyer:</h1>       <input type="submit" value="s'inscrire">
             </form>
+
+            <?php
+                if(isset($_GET['success'])){
+                    echo $_GET['success'];
+                }
+                else if(isset($_GET['error'])) {
+                    echo $_GET['error'];
+                }
+            ?>
     
         </div>
     </main>
@@ -26,9 +35,7 @@
 </body>
 
 <?php
-    $login=0;
-    $nom="nom";
-    $mdp="mdp";
+   
     if($_SERVER['REQUEST_METHOD']==="POST"){
         if(isset($_POST['nom'])&& isset($_POST['login']) && isset($_POST['mdp'])){
             if(!Empty($_POST['nom']) && !Empty($_POST['login']) && !Empty($_POST['mdp']))    
@@ -43,6 +50,10 @@
     
     if(mysqli_num_rows(mysqli_query($con,"select * from Personne where login='$login'"))===0){
         mysqli_query($con, "INSERT INTO Personne VALUES ('$login', '$nom', '$mdp')");
+        header("location:?success=Compte creer avec succes");
+    }
+    else {
+        header("location:?error=Ce login existe deja");
     }
     
 
