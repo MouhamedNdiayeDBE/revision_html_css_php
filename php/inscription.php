@@ -54,7 +54,7 @@
                 //Requete dans la bd
     
                 if(mysqli_num_rows(mysqli_query($con,"select * from Personne where login='$login'"))===0){
-                    mysqli_query($con, "INSERT INTO Personne VALUES ('$login', '$nom', '$mdp')");
+                    mysqli_query($con, "INSERT INTO Personne VALUES ('$login', '$nom', '$mdp','$profil','$classe')");
                     header("location: inscription.php?success=Compte creer avec succes");
                     echo $_GET['success'];
                 }

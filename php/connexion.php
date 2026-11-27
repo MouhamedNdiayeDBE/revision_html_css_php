@@ -14,14 +14,30 @@
 
                 $requete_sql = "select login from personne where login ='".$login."'"; 
                 
-                if(mysqli_query($con,$requete_sql) == true){
+                if(mysqli_query($con,$requete_sql) !== false){
                     if(mysqli_num_rows(mysqli_query($con,$requete_sql))==1){
                         //$_SESSION['login'] = $login;
-                        header("location:espace.php?login='".$login."'");
+                        $query = mysqli_query($con,"select profil,classe from personne where login = '".$login."'");
+                       
+                            while($element = mysqli_fetch_array($query)){
+                                $data['profil'] = $element['profil'];
+                                $data['classe'] = $element['classe'];
+                            
+                            }
+
+                            $profil = $data['profil'];
+                            $classe = $data['classe'];
+
+                        header("location:espace.php?login=$login&profil=$profil&classe=$classe");
+                    
                     }
+                    else {
+                        echo "Ce login n'existe pas";
+                    }
+
                 }
                 else {
-                    echo "Echec de la requete";
+                    echo "Requete Incorrect";
                 }
 
 
