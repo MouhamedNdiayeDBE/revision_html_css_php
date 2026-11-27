@@ -16,7 +16,7 @@
                 
                 if(mysqli_query($con,$requete_sql) == false){
                     if(mysqli_num_rows(mysqli_query($con,$requete_sql))==1){
-                        header
+                        header("location");
                     }
                 }
                 else {
