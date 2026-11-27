@@ -10,8 +10,21 @@
         <div>
             <form method="POST" action="">
                 <h1>nom:</h1>           <input type="text" placeholder="nom" name="nom"> <br/>
+                
                 <h1>login:</h1>         <input type="text" placeholder="login" name="login"> <br/>
+                
+                <h1>profil:</h1>         <select>
+                                            <option>Etudiant</option>
+                                            <option>Professeur</option>
+                                         </select>
+
+                <h1>Classe:</h1>         <select>
+                                            <option>DBE</option>
+                                            <option>DFE</option>
+                                        </select>
+                
                 <h1>mot de passe:</h1>  <input type="password" placeholder="mot de passe" name="mdp"> <br/>
+                
                 <h1>envoyer:</h1>       <input type="submit" value="s'inscrire">
             </form>
     
