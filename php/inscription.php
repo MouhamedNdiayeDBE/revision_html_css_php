@@ -13,19 +13,21 @@
                 
                 <h1>login:</h1>         <input type="text" placeholder="login" name="login"> <br/>
                 
-          <!--      <h1>profil:</h1>         <select>
-                                            <option>Etudiant</option>
-                                            <option>Professeur</option>
-                                         </select>
-
-                <h1>Classe:</h1>         <select>
-                                            <option>DBE</option>
-                                            <option>DFE</option>
-                                        </select>
-
--->
+          
                 
                 <h1>mot de passe:</h1>  <input type="password" placeholder="mot de passe" name="mdp"> <br/>
+
+                <h1>profil:</h1>         <select name="profil">
+                                            <option value="e">Etudiant</option>
+                                            <option value="p">Professeur</option>
+                                         </select>
+
+                <h1>Classe:</h1>         <select name="classe">
+                                            <option value="dbe">DBE</option>
+                                            <option value="dfe">DFE</option>
+                                        </select>
+
+
                 
                 <h1>envoyer:</h1>       <input type="submit" value="s'inscrire">
             </form>
@@ -43,8 +45,8 @@
 <?php
    
     if($_SERVER['REQUEST_METHOD']==="POST"){
-        if(isset($_POST['nom'])&& isset($_POST['login']) && isset($_POST['mdp'])){
-            if(!Empty($_POST['nom']) && !Empty($_POST['login']) && !Empty($_POST['mdp'])){
+        if(isset($_POST['nom']) && isset($_POST['login']) && isset($_POST['mdp']) && isset($_POST['profil']) && isset($_POST['classe'])){
+            if(!Empty($_POST['nom']) && !Empty($_POST['login']) && !Empty($_POST['mdp']) && !empty($_POST['profil']) && !empty($_POST['classe'])){
                 extract($_POST);
                 
                 //connexion de la base de donnee
