@@ -13,7 +13,7 @@
                 
                 <h1>login:</h1>         <input type="text" placeholder="login" name="login"> <br/>
                 
-                <h1>profil:</h1>         <select>
+          <!--      <h1>profil:</h1>         <select>
                                             <option>Etudiant</option>
                                             <option>Professeur</option>
                                          </select>
@@ -22,6 +22,8 @@
                                             <option>DBE</option>
                                             <option>DFE</option>
                                         </select>
+
+-->
                 
                 <h1>mot de passe:</h1>  <input type="password" placeholder="mot de passe" name="mdp"> <br/>
                 
